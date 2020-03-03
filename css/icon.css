@@ -1,0 +1,14 @@
+.navbar-brand {
+	background: url(eevee.png) no-repeat;
+    background-size: auto 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    padding: 12px 15px;
+        padding-top: 6px;
+        padding-right: 15px;
+        padding-bottom: 12px;
+        padding-left: 40px;
+}
