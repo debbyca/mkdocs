@@ -141,11 +141,59 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>.hideList</li>
+
+<li>.sourcesList</li>
+
+<li>.topicList</li>
+
+<li>$:/.giffmex/.Stylesheet4tiddlyblink</li>
+
+<li>$:/.giffmex/actions/new-journal</li>
+
+<li>$:/.giffmex/buttons/newnote-datetime</li>
+
+<li>$:/.giffmex/Customize.TiddlyBlink</li>
+
+<li>$:/.giffmex/meta/hack.tiddlyblink</li>
+
+<li>$:/.giffmex/meta/TiddlyBlink.gears.and.doo-hickeys</li>
+
+<li>$:/.giffmex/sidebar/parallel</li>
+
+<li>$:/.giffmex/sidebar/parallel2</li>
+
+<li>$:/.giffmex/sidebar/tabs/tiddlyblinkcontrols</li>
+
+<li>$:/.giffmex/ViewTemplate/refscontext</li>
+
+<li>$:/.giffmex/ViewTemplate/refslinks</li>
+
+<li>$:/.giffmex/ViewTemplate/refstranscludeclean</li>
+
+<li>$:/.giffmex/ViewToolbar/new-note-here</li>
+
+<li>$:/.giffmex/ViewToolbar/new-note-here-datetime</li>
+
+<li>$:/.giffmex/viewtoolbar/viewrefs</li>
+
+<li>$:/.giffmex/ViewToolbar/viewrefscheckboxes</li>
+
+<li>$:/.tb/macros/list-search</li>
+
 <li>$:/config/EditorTypeMappings/text/vnd.tiddlywiki</li>
+
+<li>$:/config/NewJournal/Title</li>
+
+<li>$:/config/RelinkOnRename</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/.giffmex/ViewToolbar/viewrefscheckboxes</li>
 
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
+
+<li>$:/fullscreen-editor</li>
 
 <li>$:/GitHub/Branch</li>
 
@@ -161,13 +209,31 @@ Error message and password prompt
 
 <li>$:/isEncrypted</li>
 
+<li>$:/jd/fullscreen-editor/EditButton</li>
+
 <li>$:/palette</li>
+
+<li>$:/palettes/TiddlyBlink</li>
+
+<li>$:/plugins/danielo515/context/css</li>
+
+<li>$:/plugins/danielo515/ContextPlugin</li>
+
+<li>$:/plugins/danielo515/ContextPlugin/Caption</li>
+
+<li>$:/plugins/danielo515/ContextPlugin/widgets/context.js</li>
 
 <li>$:/plugins/flibbles/relink</li>
 
+<li>$:/plugins/jd/fullscreen-editor</li>
+
 <li>$:/plugins/rmnvsl/krystal</li>
 
+<li>$:/plugins/sk/WhiteList</li>
+
 <li>$:/plugins/snowgoon88/edit-comptext</li>
+
+<li>$:/plugins/snowgoon88/edit-comptext/config</li>
 
 <li>$:/plugins/tiddlywiki/highlight</li>
 
@@ -180,6 +246,8 @@ Error message and password prompt
 <li>$:/plugins/tobibeer/preview/defaults/delay</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/sk/WhiteList</li>
 
 <li>$:/state/plugin-info--2135486722-$:/plugins/tobibeer/preview---1090399154</li>
 
@@ -200,6 +268,14 @@ Error message and password prompt
 <li>$:/status/UserName</li>
 
 <li>$:/StoryList</li>
+
+<li>$:/tags/EditToolbar</li>
+
+<li>$:/tags/PageControls</li>
+
+<li>$:/tags/ViewTemplate</li>
+
+<li>$:/tags/ViewToolbar</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -413,9 +489,17 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>$:/view</li>
+
 <li>From collector to creator</li>
 
 <li>How to add the 'Cc' field and 'Important flag' in an email sent by Python 3</li>
+
+<li>TiddlyBlink</li>
+
+<li>TiddlyBlink home</li>
 
 <li>Welcome</li>
 
@@ -433,8 +517,479 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20200527074429500" modified="20200527074434000" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki">
+<div caption="hide" created="20200131144745512" modified="20200304194924022" tags="tb meta" title=".hideList">
+<pre>Add the tag `hide` or the tag `outlines` to any tiddler to keep it from appearing in the 'simple transclude' view of the references from other tiddlers. Tiddlers with either tag will appear here.
+
+&lt;&lt;list-search
+&quot;[!is[system]tag[outlines]] [!is[system]tag[hide]] +[sort[title]]&quot;
+&quot;search&quot;
+&quot;$:/temp/list-search-example&quot;
+&quot;$:/core/ui/ListItemTemplate&quot;
+placeholder:&quot;&quot; &gt;&gt;</pre>
+</div>
+<div caption="sources" created="20200131035322127" modified="20200304194952635" tags="tb meta" title=".sourcesList">
+<pre>Tag tiddlers with the tag `sources` if they are book chapters, articles, or webpages. They will appear here and will also appear as references below the tiddlers linked to from them.
+
+&lt;&lt;list-search
+&quot;[!is[system]tag[sources]sort[title]]&quot;
+&quot;search&quot;
+&quot;$:/temp/list-search-example&quot;
+&quot;$:/core/ui/ListItemTemplate&quot;
+placeholder:&quot;&quot; &gt;&gt;</pre>
+</div>
+<div caption="topics" created="20200128030955660" modified="20200304194946258" tags="tb meta" title=".topicList">
+<pre>Topics are any notes that do not have `202` in their title field (i.e., tiddlers created with the clock icon buttons), and are not tagged with any of the following tags: `hide`, `meta`, `outlines`, or `sources`. 
+
+&lt;&lt;list-search
+&quot;[!is[system]!tag[sources]!tag[meta]!tag[outlines]!tag[hide]!regexp:title[202]sort[title]]&quot;
+&quot;search&quot;
+&quot;$:/temp/list-search-example&quot;
+&quot;$:/core/ui/ListItemTemplate&quot;
+placeholder:&quot;&quot; &gt;&gt;</pre>
+</div>
+<div created="20191010123116672" modified="20200304195028956" tags="tb $:/tags/Stylesheet" title="$:/.giffmex/.Stylesheet4tiddlyblink" type="text/css">
+<pre>/*BOXES*/
+
+html body.tc-body .graybox {display:block;background-color:#eee;padding:5px;padding-left:20px;padding-top:10px;margin-top:5px;margin-bottom:5px;width:95%;}
+
+body p {color:#000}
+code {color: #b0a;}
+
+/*TIGHT NOTES*/
+
+html body.tc-body h1, html body.tc-body h2, html body.tc-body h3, html body.tc-body h4 { margin-top: 0.3em; margin-bottom: 0.3em; }
+
+/*FONT SUBTITLES*/
+
+.serif {font-family: 'Arial', sans-serif;color:#bbb;font-size:10pt;}
+
+html body.tc-body .serif a.tc-tiddlylink-external {font-family: 'Arial', sans-serif;font-size:12pt; line-height:normal;font-weight:normal;color:#666;}
+
+/*FONT STUFF (colors)*/
+
+html body.tc-body .lightgraybk {background:#eee;padding:1px 4px px 4px;margin-bottom:2px;font-family:'Arial', sans-serif;}
+
+.red {color:red;}
+
+/*FONT STUFF SOURCES*/
+
+html body.tc-body .source {color:#777;font-size:10pt;}
+
+/*HORIZONTAL RULE*/
+
+html body.tc-body hr {border:0px;}
+
+html body.tc-body hr {
+	border-top: 1px solid #bbb;
+	text-align: center;
+width:100%; margin-top:15px; margin-bottom:15px;
+
+}
+
+/*ICON COLORS*/
+
+html body.tc-body .tc-image-new-button {stroke: white;fill:#7897fc;}
+html body.tc-body .tc-image-timestamp-on {stroke: white;fill:#7897fc;}
+html body.tc-body .tc-image-chevron-up {stroke: white;fill:#ccc;}
+html body.tc-body .tc-image-chevron-down {stroke: white;fill:#ccc;}
+html body.tc-body .tc-image-fold-button {stroke: white;fill:#ccc;}
+html body.tc-body .tc-image-unfold-button {stroke: white;fill:#ccc;}
+html body.tc-body .tc-image-preview-open {stroke: white;fill:#d9c;}
+
+
+/*INDENTING*/
+
+html body.tc-body .indent1 {margin-left:1.5em;display:block;}
+
+/*LINKS*/
+
+html body.tc-body a.tc-tiddlylink {text-decoration: none;font-style: normal;font-weight: normal;} 
+html body.tc-body  a.tc-tiddlylink-missing {font-weight:normal; background-color:#ffd; color:#66f;font-style:normal;}
+html body.tc-body a.tc-tiddlylink-external {text-decoration: none;font-weight: normal;color: #109;}
+html body.tc-body a.tc-tiddlylink-visited {text-decoration: none;font-weight: normal;color: #66f;}
+
+html body.tc-body .source a.tc-tiddlylink-external {font-weight: normal;font-size:10pt;}
+
+/*LISTS BASIC*/
+
+html body.tc-body ul li {color:#000;}
+html body.tc-body ol li {color:#000;}
+
+/*TABLES BASIC*/
+
+html body.tc-body th {color:#000;}
+html body.tc-body td {color:#000;}
+
+/*TABLES GREENALTROWS*/
+
+html body.tc-body .greenaltrows th {padding: 10px; border: 1px solid #aaa; vertical-align:top;text-align:left;}
+html body.tc-body .greenaltrows td {padding: 10px; border: 1px solid #aaa; vertical-align:top;}
+html body.tc-body .greenaltrows tr:nth-child(even) td {background-color:#F3F6F5;}
+html body.tc-body .greenaltrows tr:nth-child(odd) td {background-color:#E7EDEB;}
+
+html body.tc-body .greenaltrows {
+-moz-box-shadow: 10px 10px 5px #bbb;
+-webkit-box-shadow: 10px 10px 5px #bbb;
+box-shadow: 10px 10px 5px #bbb;
+}
+
+/*TIDDLER TITLES*/
+
+.tc-tiddler-missing .tc-title { font-style: normal; font-weight: bold; }
+
+/*HIDE SECTIONS FOR PRINTING*/
+
+@media print {#tc-page-background {display: none ! important;}} 
+@media print {.tc-tags-wrapper {display: none ! important;}} 
+
+ @media print { body.tc-body {background-color: transparent;}}
+ @media print {.tc-image-chevron-up {display: none ! important;}} 
+ @media print {.tc-image-chevron-down {display: none ! important;}} 
+ @media print {button.sidebar-toggle {display: none ! important;}} 
+@media print {.hideprint {display: none ! important;}} 
+@media print {.tc-btn-invisible {display: none ! important;}} 
+
+@media print {
+
+.story-river {
+margin: 0;
+padding: 0;
+}
+
+html body.tc-body .tc-tiddler-frame {
+margin: 0;
+border-bottom: 1px solid #fff;
+padding: 5px;}
+
+html body.tc-body a.tc-tiddlylink-external:hover {
+border: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;
+}
+
+html body.tc-body .tc-tiddler-info {
+padding: 14px 42px 14px 42px;
+background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
+
+}
+}
+</pre>
+</div>
+<div created="20200102141142879" modified="20200304195036743" tags="tb" title="$:/.giffmex/actions/new-journal">
+<pre>&lt;$vars journalTitleTemplate={{$:/config/NewJournal/Title}} journalTags={{$:/config/NewJournal/Tags}} journalText=&quot;&quot;&gt;
+&lt;$wikify name=&quot;journalTitle&quot; text=&quot;&quot;&quot;&lt;$macrocall $name=&quot;now&quot; format=&lt;&lt;journalTitleTemplate&gt;&gt;/&gt;&quot;&quot;&quot;&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;journalTitle&gt;&gt; text=&quot;&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;journalTitle&gt;&gt; tags=&quot;&quot; text={{{ [&lt;journalTitle&gt;get[]] }}}/&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;journalTitle&gt;&gt; text=&quot;&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;journalTitle&gt;&gt; tags=&quot;&quot; text=&lt;&lt;journalText&gt;&gt;/&gt;
+&lt;/$reveal&gt;
+&lt;/$wikify&gt;
+&lt;/$vars&gt;
+</pre>
+</div>
+<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournal/Caption}}" created="20200102141336827" description="{{$:/language/Buttons/NewJournal/Hint}}" modified="20200304195043957" tags="tb $:/tags/PageControls" title="$:/.giffmex/buttons/newnote-datetime">
+<pre>\define journalButton()
+&lt;$button tooltip={{$:/language/Buttons/NewJournal/Hint}} aria-label={{$:/language/Buttons/NewJournal/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions={{$:/.giffmex/actions/new-journal}}&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+{{$:/core/images/timestamp-on}}
+&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+&lt;span class=&quot;tc-btn-text&quot;&gt;&lt;$text text={{$:/language/Buttons/NewJournal/Caption}}/&gt;&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+\end
+&lt;&lt;journalButton&gt;&gt;
+</pre>
+</div>
+<div caption="Customize TiddlyBlink" created="20200127211244101" modified="20200304195100291" tags="tb starthere meta" title="$:/.giffmex/Customize.TiddlyBlink">
+<pre>*Change the title and subtitle of this file
+**Edit [[$:/SiteTitle]] and [[$:/SiteSubtitle]]
+*Customize the date and time stamp when creating new notes 
+**Open [[$:/config/NewJournal/Title]] and adjust. The guide to formatting dates and times is here: https://tiddlywiki.com/#DateFormat
+**Make changes to the Custom Stylesheet: edit [[$:/.giffmex/.Stylesheet4tiddlyblink]] and/or create a tiddler and tag it `$:/tags/Stylesheet` and choose 'text/css' in the type field.
+*Keep WikiWords (CamelCase words like McDonalds ) from becoming links
+**Add `~` before a wikiword to keep it from becoming a link
+**To add to a word-by-word list of frequent wikiwords that should not be links, add them, comma-separated, to $:/sk/WhiteList
+**Nuclear option: To turn off //all //automatic wikiword linking, open $:/ControlPanel &gt; Settings &gt; uncheck the Camel Case Wiki Links checkbox</pre>
+</div>
+<div caption="Hacking TiddlyBlink" created="20200212220418203" modified="20200304195127414" tags="tb meta" title="$:/.giffmex/meta/hack.tiddlyblink">
+<pre>!!All references, in links and in regular text.
+
+We disabled references that do not appear in links. This was a feature in early versions of TiddlyBlink, but we and others found it produced a lot of unwanted references, and confusion as people clicked the link and did not have a link to return back to the previous tiddler.
+
+But if you would like to have this feature back in your TiddlyBlink, just edit the following tiddlers:
+
+&quot;&quot;&quot;
+ $:/.giffmex/ViewTemplate/refscontext
+$:/.giffmex/ViewTemplate/refslinks
+$:/.giffmex/ViewTemplate/refstranscludeclean
+$:/.giffmex/ViewTemplate/refstranscludecollapse
+&quot;&quot;&quot; 
+
+And replace
+
+`all[current]backlinks[]`
+
+with
+
+`regexp:text&lt;mycrit&gt;`</pre>
+</div>
+<div caption="TiddlyBlink gears and doo-hickeys" created="20200131181401307" modified="20200304195249374" tags="tb starthere meta" title="$:/.giffmex/meta/TiddlyBlink.gears.and.doo-hickeys">
+<pre>For those who want to understand ~TiddlyBlink better, tinker with it and customize it, here is the basic information (assuming you already know how ~TiddlyWiki works).
+
+''General''
+
+*CSS styles can be found and edited in $:/.giffmex/.Stylesheet4tiddlyblink 
+
+''Tiddler toolbar in view mode''
+
+*The + icon activates $:/.giffmex/ViewToolbar/new-note-here and the clock icon activates $:/.giffmex/ViewToolbar/new-note-here-datetime . These create new tiddlers whose text field contains a link to the tiddler used to create them. So the 'child' tiddler contains a link to the 'parent' tiddler. The title field is either empty or contains a date and time stamp, depending on which button is chosen.
+*The {{$:/core/images/full-screen-button}} icon activates the [[Fullscreen editor plugin|$:/plugins/jd/fullscreen-editor]]. This opens the current tiddler in edit mode that occupies the entire screen.
+
+''Link creation and editing''
+
+*Typing `[[` activates autocomplete, executed by the [[comptext plugin|$:/plugins/snowgoon88/edit-comptext]]. If the tiddler already exists, you can hit enter if the desired tiddler is the first entry, or navigate with the down arrow key until you reach it. Then hit enter. The opening and closing brackets that get created by this plugin can be modified using the tiddler $:/plugins/snowgoon88/edit-comptext/config .
+**Note that the comptext plugin relies on $:/config/EditorTypeMappings/text/vnd.tiddlywiki set to `comptext`
+*When you rename a tiddler, this activates the [[Relink plugin|$:/plugins/flibbles/relink]]. This changes all the references to the renamed tiddler title found as links in all the other tiddlers. It does not change references that are not found in links.
+*WikiWords in CamelCase automatically turn into links. $:/sk/WhiteList is a list run by the [[Whitelist plugin|$:/plugins/sk/WhiteList]] that allows you to list all WikiWords you do not want turned into links. Other options: manually insert `~` before the WikiWords as they occur in tidders, or, if you are like me and find WikiWords annoying rather than helpful, uncheck the first checkbox in the $:/ControlPanel &gt; settings tab.
+
+''Sidebar''
+
+*The ~TiddlyBlink sidebar is found in the $:/.giffmex/sidebar/tabs/tiddlyblinkcontrols tiddler.
+*The blue clock button in the sidebar activates $:/.giffmex/buttons/newnote-datetime . This is set up to create a new tiddler with a date and timestamp in the title.
+*Clicking on a checkmark in the ~TiddlyBlink tab tags one of three tiddlers ($:/.giffmex/ViewTemplate/refscontext, $:/.giffmex/ViewTemplate/refslinks, $:/.giffmex/ViewTemplate/refstranscludeclean and $:/.giffmex/ViewTemplate/refstranscludecollapse) with the tag ~$:/tags/ViewTemplate, making them show up under the tiddler. Those three tiddlers grab all the text references to the current tiddler, and format them into either links, transclusions, or highlighted search results in context. The latter uses the [[ContextPlugin|$:/plugins/danielo515/ContextPlugin]]. </pre>
+</div>
+<div created="20190624061203012" creator="Gloom" modified="20200304195303860" modifier="Gloom" purposedesc="text edit box for Show tiddler sidebar" tags="tb #template $:/.giffmex/sidebar/parallel2" title="$:/.giffmex/sidebar/parallel" type="application/x-tiddler">
+<pre>Paste a tiddler title to view tiddler in tab: &lt;$edit-text tiddler=&quot;$:/temp/sbartidddisplayvalue&quot; placeholder=&quot;tiddler title&quot; tag=&quot;input&quot; type=&quot;text&quot;/&gt;</pre>
+</div>
+<div caption="parallel" created="20190624061500276" creator="Gloom" infodesc="For temporarily displaying a tiddler in the sidebar (without having to tag it). Type the tiddler title in the text field and tiddler will sidpay below it." modified="20200304195325476" modifier="Gloom" tags="tb $:/tags/SideBar *sidebar" title="$:/.giffmex/sidebar/parallel2" tooltip="For temporarily displaying a tiddler in the sidebar (without having to tag it)" type="application/x-tiddler">
+<pre>{{$:/.giffmex/sidebar/parallel}} &lt;br&gt;&lt;h2&gt;&lt;$list filter=&quot;[{$:/temp/sbartidddisplayvalue}is[tiddler]]&quot; emptyMessage=&quot;tiddler doesn't exist&quot; &gt;&lt;/$list&gt;&lt;/h2&gt;
+
+&lt;$transclude tiddler={{$:/temp/sbartidddisplayvalue}} mode=&quot;block&quot; /&gt;</pre>
+</div>
+<div caption="{{$:/core/images/options-button}}" created="20200129233103456" modified="20200304195335855" tags="tb $:/tags/SideBar" title="$:/.giffmex/sidebar/tabs/tiddlyblinkcontrols">
+<pre>\define tagreset() 
+&lt;$list filter=&quot;[tag[refs]sort[created]] -[[$(currentTiddler)$]]&quot; variable=&quot;removeme&quot;&gt;
+&lt;$action-listops  $tiddler=&lt;&lt;removeme&gt;&gt; $tags=&quot;+[remove[$:/tags/ViewTemplate]]&quot;/&gt;
+&lt;/$list&gt;
+&lt;$action-deletefield dummy/&gt;
+\end
+
+Click the palette icon below to ''select a color palette'' from a dropdown. Default is ~TiddlyBlink. TiddlyWiki default is Vanilla. Note that dark themes may obscure some features.
+
+Click here: {{$:/core/ui/Buttons/palette}}
+
+&lt;hr&gt;
+
+&lt;span class=&quot;graybox&quot;&gt;
+
+''View references as:''
+
+&lt;$list filter=&quot;[tag[refs]sort[created]]&quot;&gt;
+&lt;$list filter=&quot;[all[current]tag[$:/tags/ViewTemplate]]&quot;&gt;
+&lt;$checkbox field=dummy checked=&quot;yes&quot; unchecked=&quot;yes&quot; default=&quot;yes&quot;&gt;&lt;/$checkbox&gt;
+&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;br/&gt; 
+&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]!tag[$:/tags/ViewTemplate]]&quot;&gt;
+&lt;$checkbox tag=&quot;$:/tags/ViewTemplate&quot; xinvertTag=&quot;yes&quot; checkactions=&lt;&lt;tagreset&gt;&gt;/&gt;&lt;$link&gt; &lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;br/&gt; 
+&lt;/$list&gt;
+&lt;/$list&gt;
+
+&lt;br&gt;Note that the gray boxes in the context and transclude options are links to their respective tiddlers.
+
+&lt;/span&gt;</pre>
+</div>
+<div caption="search results in context" created="20200102141715979" modified="20200304195344624" tags="tb refs" title="$:/.giffmex/ViewTemplate/refscontext">
+<pre>\define mycrit() (?i)\b$(searchspx)$\b
+
+&lt;hr&gt;References: 
+
+&lt;$vars searchme=&lt;&lt;currentTiddler&gt;&gt; searchspx={{{ [&lt;currentTiddler&gt;escaperegexp[]]}}} &gt;
+
+&lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[outlines]!tag[hide]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span class=&quot;indent1&quot;&gt;&lt;$link&gt;&lt;span class=&quot;graybox&quot;&gt;&lt;$context term=&lt;&lt;searchme&gt;&gt; /&gt;&lt;/span&gt;&lt;/$link&gt;&lt;/span&gt;&lt;/$list&gt;
+&lt;/$vars&gt;
+</pre>
+</div>
+<div caption="links" created="20200126143031898" modified="20200304195352126" tags="tb refs $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks">
+<pre>\define mycrit() (?i)\b$(searchspx)$\b
+
+&lt;hr&gt;References: 
+
+&lt;$vars searchme=&lt;&lt;currentTiddler&gt;&gt; searchspx={{{ [&lt;currentTiddler&gt;escaperegexp[]]}}} &gt;
+
+&lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[hide]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;
+&lt;/$vars&gt;
+</pre>
+</div>
+<div caption="simple transclusion" created="20200126142157739" modified="20200304195401578" tags="tb refs" title="$:/.giffmex/ViewTemplate/refstranscludeclean">
+<pre>&lt;hr&gt;
+
+References: &lt;br&gt;
+
+&lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[hide]!tag[outlines]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span class=&quot;indent1&quot;&gt;&lt;$link&gt;&lt;span class=&quot;graybox&quot;&gt;&lt;$transclude field=&quot;text&quot; mode=&quot;block&quot; /&gt;&lt;/span&gt;&lt;/$link&gt;&lt;/span&gt;&lt;/$list&gt;
+</pre>
+</div>
+<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127162624895" description="{{$:/language/Buttons/NewJournalHere/Hint}}" modified="20200304195448159" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/ViewToolbar/new-note-here">
+<pre>\define button()
+&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt; actions=&lt;&lt;actions&gt;&gt;&gt;
+{{$:/core/images/new-button}}
+&lt;/$button&gt;
+\end
+
+\define actions()
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;journalTitle&gt;&gt; text=&quot;&quot;&quot;[[$(tid)$]]&quot;&quot;&quot;/&gt;
+\end
+
+&lt;$wikify name=tid text=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;&lt;button&gt;&gt;
+&lt;/$wikify&gt;
+</pre>
+</div>
+<div caption="{{$:/core/images/new-journal-button}} {{$:/language/Buttons/NewJournalHere/Caption}}" created="20200127185823887" description="{{$:/language/Buttons/NewJournalHere/Hint}}" modified="20200304195454038" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/ViewToolbar/new-note-here-datetime">
+<pre>\whitespace trim
+
+\define journalButtonActions()
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;now &quot;&quot;&quot;$(journalTitleTemplate)$&quot;&quot;&quot;&gt;&gt; text=&quot;&quot;&quot;[[$(tid)$]]&quot;&quot;&quot; /&gt;
+\end
+
+\define journalButtonTags()
+[[$(currentTiddlerTag)$]] $(journalTags)$
+\end
+
+\define journalButton()
+&lt;$button tooltip={{$:/language/Buttons/NewJournalHere/Hint}}
+   aria-label={{$:/language/Buttons/NewJournalHere/Caption}}
+   class=&lt;&lt;tv-config-toolbar-class&gt;&gt;
+   actions=&lt;&lt;journalButtonActions&gt;&gt;&gt;
+   &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+      {{$:/core/images/timestamp-on}}
+   &lt;/$list&gt;
+   &lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+      &lt;span class=&quot;tc-btn-text&quot;&gt;
+         &lt;$text text={{$:/language/Buttons/NewJournalHere/Caption}}/&gt;
+      &lt;/span&gt;
+   &lt;/$list&gt;
+&lt;/$button&gt;
+\end
+
+&lt;$set name=&quot;journalTitleTemplate&quot; value={{$:/config/NewJournal/Title}}&gt;
+&lt;$set name=&quot;tid&quot; value=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;&lt;journalButton&gt;&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+</pre>
+</div>
+<div caption="{{$:/core/images/preview-open}} {{$:/language/Buttons/More/Caption}}" created="20200210144315559" description="{{$:/language/Buttons/More/Hint}}" modified="20200304195500429" tags="tb $:/tags/ViewToolbar" title="$:/.giffmex/viewtoolbar/viewrefs">
+<pre>\whitespace trim
+\define config-title()
+$:/config/ViewToolbarButtons/Visibility/$(listItem)$
+\end
+&lt;$button popup=&lt;&lt;qualify &quot;$:/state/popup/more&quot;&gt;&gt; tooltip={{$:/language/Buttons/More/Hint}} aria-label={{$:/language/Buttons/More/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt; selectedClass=&quot;tc-selected&quot;&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+{{$:/core/images/preview-open}}
+&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+&lt;span class=&quot;tc-btn-text&quot;&gt;
+&lt;$text text=&quot; &quot;/&gt;
+&lt;$text text={{$:/language/Buttons/More/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;$reveal state=&lt;&lt;qualify &quot;$:/state/popup/more&quot;&gt;&gt; type=&quot;popup&quot; position=&quot;belowleft&quot; animate=&quot;yes&quot;&gt;
+
+&lt;div class=&quot;tc-drop-down&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value=&quot;tc-btn-invisible&quot;&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/ViewToolbar]!has[draft.of]] +[tag[refview]] -[[$:/core/ui/Buttons/more-tiddler-actions]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;config-title&gt;&gt; text=&quot;hide&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; filter=&quot;[&lt;tv-config-toolbar-class&gt;] [&lt;listItem&gt;encodeuricomponent[]addprefix[tc-btn-]]&quot;&gt;
+
+&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=&quot;inline&quot;/&gt;
+
+&lt;/$set&gt;
+
+&lt;/$reveal&gt;
+
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/div&gt;
+
+&lt;/$reveal&gt;</pre>
+</div>
+<div caption="{{$:/core/images/options-button}}" created="20200129233103456" modified="20200304195517765" tags="tb $:/tags/ViewToolbar refview" title="$:/.giffmex/ViewToolbar/viewrefscheckboxes">
+<pre>\define tagreset() 
+&lt;$list filter=&quot;[tag[refs]sort[created]] -[[$(currentTiddler)$]]&quot; variable=&quot;removeme&quot;&gt;
+&lt;$action-listops  $tiddler=&lt;&lt;removeme&gt;&gt; $tags=&quot;+[remove[$:/tags/ViewTemplate]]&quot;/&gt;
+&lt;/$list&gt;
+&lt;$action-deletefield dummy/&gt;
+\end
+
+&lt;span style=&quot;font-size:12pt;&quot;&gt;
+
+&lt;span class=&quot;graybox&quot;&gt;
+
+''View references as:''
+
+&lt;$list filter=&quot;[tag[refs]sort[created]]&quot;&gt;&lt;$list filter=&quot;[all[current]tag[$:/tags/ViewTemplate]]&quot;&gt;
+&lt;$checkbox field=dummy checked=&quot;yes&quot; unchecked=&quot;yes&quot; default=&quot;yes&quot;&gt;&lt;/$checkbox&gt;&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current]!tag[$:/tags/ViewTemplate]]&quot;&gt;&lt;$checkbox tag=&quot;$:/tags/ViewTemplate&quot; xinvertTag=&quot;yes&quot; checkactions=&lt;&lt;tagreset&gt;&gt;/&gt;&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt; &lt;/$list&gt;&lt;/$list&gt;
+
+&lt;/span&gt;
+
+&lt;/span&gt;
+
+
+{{build-and-export}}</pre>
+</div>
+<div bag="default" created="20141202200448128" creator="Tobias Beer" modified="20200304195527527" modifier="Tobias Beer" revision="0" summary="the [[list-search]] macro allows to filter list outputs" tags="tb $:/tags/Macro" title="$:/.tb/macros/list-search" type="text/vnd.tiddlywiki">
+<pre>\define list-search(
+filter:&quot;[tags[]]&quot;,
+search:&quot;search:title&quot;,
+state:&quot;$:/temp/list-search&quot;,
+template:&quot;$:/core/ui/ListItemTemplate&quot;,
+placeholder:&quot;Filter&quot;,
+limit:100000
+)
+&lt;div&gt;
+&lt;$edit-text
+tiddler=&quot;$state$&quot;
+type=&quot;search&quot;
+tag=&quot;input&quot;
+default=&quot;&quot;
+placeholder=&quot;$placeholder$&quot;/&gt;
+&lt;/div&gt;
+
+&lt;$reveal state=&quot;$state$&quot; type=&quot;match&quot; text=&quot;&quot;&gt;
+&lt;$list filter=&quot;$filter$+[limit[$limit$]]&quot; template=&quot;$template$&quot;/&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal state=&quot;$state$&quot; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$list filter=&quot;$filter$+[$search${$state$}]+[limit[$limit$]]&quot; template=&quot;$template$&quot;/&gt;
+&lt;/$reveal&gt;
+\end</pre>
+</div>
+<div created="20191215203357897" modified="20200304195543050" tags="tb" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki">
 <pre>comptext</pre>
+</div>
+<div created="20191225174624729" modified="20200304195553439" tags="tb" title="$:/config/NewJournal/Title">
+<pre>YYYY-0MM / 0DD / 0hh:0mm:0ss /</pre>
+</div>
+<div created="20200106214031452" modified="20200304195600676" tags="tb" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
+</div>
+<div created="20200210145131741" modified="20200304195613549" tags="tb" title="$:/config/ViewToolbarButtons/Visibility/$:/.giffmex/ViewToolbar/viewrefscheckboxes">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
 <pre>{
@@ -9809,8 +10364,12 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200618090318580" creator="debby" modified="20200618090320949" modifier="debby" title="$:/DefaultTiddlers">
-<pre>Welcome</pre>
+<div created="20200106211749103" modified="20200304200121375" tags="tb" title="$:/DefaultTiddlers">
+<pre>[[TiddlyBlink home]]
+</pre>
+</div>
+<div created="20200304200133691" list="$:/jd/fullscreen-editor/EditButton $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/ViewTemplate/refscontext TiddlyBlink" modified="20200304200135317" tags="tb" title="$:/fullscreen-editor">
+<pre></pre>
 </div>
 <div created="20200618012714902" modified="20200618013205499" title="$:/GitHub/Branch">
 <pre>gh-pages</pre>
@@ -9830,13 +10389,383 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/tobibeer/preview]]</pre>
+# [[$:/config/NewJournal/Title]]
+# [[$:/DefaultTiddlers]]
+# [[$:/config/EditorTypeMappings/text/vnd.tiddlywiki]]
+# [[$:/palette]]
+# [[$:/tags/EditToolbar]]
+# [[$:/tags/PageControls]]
+# [[$:/tags/ViewTemplate]]
+# [[$:/tags/ViewToolbar]]
+# [[$:/view]]
+# [[$:/themes/tiddlywiki/vanilla/options/sidebarlayout]]
+# [[$:/plugins/danielo515/ContextPlugin/widgets/context.js]]
+# [[$:/plugins/danielo515/ContextPlugin/Caption]]
+# [[$:/jd/fullscreen-editor/EditButton]]
+# [[$:/sk/WhiteList]]
+# [[$:/plugins/snowgoon88/edit-comptext/config]]
+# [[.hideList]]
+# [[.sourcesList]]
+# [[.topicList]]
+# [[$:/.giffmex/.Stylesheet4tiddlyblink]]
+# [[$:/.giffmex/actions/new-journal]]
+# [[$:/.giffmex/buttons/newnote-datetime]]
+# [[$:/.giffmex/Customize.TiddlyBlink]]
+# [[$:/.giffmex/meta/hack.tiddlyblink]]
+# [[$:/.giffmex/meta/TiddlyBlink.gears.and.doo-hickeys]]
+# [[$:/.giffmex/sidebar/parallel]]
+# [[$:/.giffmex/sidebar/parallel2]]
+# [[$:/.giffmex/sidebar/tabs/tiddlyblinkcontrols]]
+# [[$:/.giffmex/ViewTemplate/refscontext]]
+# [[$:/.giffmex/ViewTemplate/refslinks]]
+# [[$:/.giffmex/ViewTemplate/refstranscludeclean]]
+# [[$:/.giffmex/ViewToolbar/new-note-here]]
+# [[$:/.giffmex/ViewToolbar/new-note-here-datetime]]
+# [[$:/.giffmex/viewtoolbar/viewrefs]]
+# [[$:/.giffmex/ViewToolbar/viewrefscheckboxes]]
+# [[$:/.tb/macros/list-search]]
+# [[$:/config/RelinkOnRename]]
+# [[$:/config/ViewToolbarButtons/Visibility/$:/.giffmex/ViewToolbar/viewrefscheckboxes]]
+# [[$:/fullscreen-editor]]
+# [[$:/palettes/TiddlyBlink]]
+# [[$:/plugins/danielo515/context/css]]
+# [[$:/plugins/danielo515/ContextPlugin]]
+# [[$:/plugins/jd/fullscreen-editor]]
+# [[$:/plugins/sk/WhiteList]]
+# [[TiddlyBlink]]
+# [[TiddlyBlink home]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200618015001145" modified="20200618020355946" title="$:/palette">
-<pre>$:/palettes/Twilight</pre>
+<div caption="{{$:/core/images/full-screen-button}} edit in full screen" created="20190204123121582" creator="jd" description="Edit in full screen mode" modified="20200304200142793" modifier="jd" tags="tb $:/tags/ViewToolbar" title="$:/jd/fullscreen-editor/EditButton">
+<pre>\whitespace trim
+&lt;$navigator story=&quot;$:/fullscreen-editor&quot;&gt;
+&lt;$button message=&quot;tm-edit-tiddler&quot; tooltip=&quot;Edit in full screen mode&quot; class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]&quot;&gt;
+{{$:/core/images/full-screen-button}}
+&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]&quot;&gt;
+&lt;span class=&quot;tc-btn-text&quot;&gt;
+&lt;$text text=&quot; &quot;/&gt;
+&lt;$text text=&quot;edit in full screen&quot;/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;/$navigator&gt;</pre>
+</div>
+<div created="20200228210954683" modified="20200304200152865" tags="tb" title="$:/palette">
+<pre>$:/palettes/TiddlyBlink</pre>
+</div>
+<div created="20200222183545341" description="the opposite of TiddlyWiki's usual color scheme" modified="20200304200158934" name="TiddlyBlink" tags="tb $:/tags/Palette" title="$:/palettes/TiddlyBlink" type="application/x-tiddler-dictionary">
+<pre>alert-background: #ffe476
+alert-border: #b99e2f
+alert-highlight: #881122
+alert-muted-foreground: #b99e2f
+background: #ffffff
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-background: 
+button-foreground: 
+button-border: 
+code-background: #f7f7f9
+code-border: #e1e1e8
+code-foreground: #dd1144
+diff-delete-background: #ffc9c9
+diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-equal-background: 
+diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-insert-background: #aaefad
+diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-invisible-background: 
+diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: #ff0000
+download-background: #34c734
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: &lt;&lt;colour background&gt;&gt;
+dropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;
+dropdown-tab-background-selected: #fff
+dropdown-tab-background: #ececec
+dropzone-background: rgba(0,200,0,0.7)
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: #0000aa
+external-link-foreground: #0000ee
+foreground: #333333
+message-background: #ecf2ff
+message-border: #cfd6e6
+message-foreground: #547599
+modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: #999999
+modal-footer-background: #f5f5f5
+modal-footer-border: #dddddd
+modal-header-border: #eeeeee
+muted-foreground: #bbb
+notification-background: #ffffdd
+notification-border: #999999
+page-background: #fff
+pre-background: #f5f5f5
+pre-border: #cccccc
+primary: #5778d8
+select-tag-background: 
+select-tag-foreground: 
+sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-controls-foreground-hover: #000000
+sidebar-controls-foreground: #aaaaaa
+sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+sidebar-foreground: #acacac
+sidebar-muted-foreground-hover: #444444
+sidebar-muted-foreground: #c0c0c0
+sidebar-tab-background-selected: #f4f4f4
+sidebar-tab-background: #e0e0e0
+sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
+sidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;
+sidebar-tab-divider: #e4e4e4
+sidebar-tab-foreground-selected: 
+sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: #444444
+sidebar-tiddler-link-foreground: #999999
+site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
+static-alert-foreground: #aaaaaa
+tab-background-selected: #ffffff
+tab-background: #d8d8d8
+tab-border-selected: #d8d8d8
+tab-border: #cccccc
+tab-divider: #d8d8d8
+tab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;
+tab-foreground: #666666
+table-border: #dddddd
+table-footer-background: #a8a8a8
+table-header-background: #f0f0f0
+tag-background: #ec6
+tag-foreground: #ffffff
+tiddler-background: #f1f1f1
+tiddler-border: #b1b1b1
+tiddler-controls-foreground-hover: #888888
+tiddler-controls-foreground-selected: #444444
+tiddler-controls-foreground: #cccccc
+tiddler-editor-background: #eee
+tiddler-editor-border-image: #ffffff
+tiddler-editor-border: #cccccc
+tiddler-editor-fields-even: #e0e8e0
+tiddler-editor-fields-odd: #f0f4f0
+tiddler-info-background: #f8f8f8
+tiddler-info-border: #dddddd
+tiddler-info-tab-background: #f8f8f8
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: #c0c0c0
+tiddler-title-foreground: #00c
+toolbar-new-button: 
+toolbar-options-button: 
+toolbar-save-button: 
+toolbar-info-button: 
+toolbar-edit-button: 
+toolbar-close-button: 
+toolbar-delete-button: 
+toolbar-cancel-button: 
+toolbar-done-button: 
+untagged-background: #999999
+very-muted-foreground: #888888</pre>
+</div>
+<div created="20200126141319129" modified="20200304200206373" tags="tb $:/tags/Stylesheet" title="$:/plugins/danielo515/context/css" type="text/css">
+<pre>.matched {background-color:#ffc;}
+.tw-context {
+  border:0px solid #eee;background-color:#eee;
+  word-break: break-all; word-wrap: break-word;}</pre>
+</div>
+<div author="Danielo Rodrigez" bag="default" core-version="&gt;=5.1.0" created="20200304200213285" dependents="" description="Context search - provides visual highlight of search results" list="readme" modified="20200304200214606" plugin-type="plugin" revision="0" source="https://github.com/danielo515/TW5-contextPlugin" tags="tb" title="$:/plugins/danielo515/ContextPlugin" type="application/json" version="2.1.0">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/danielo515/ContextPlugin/widgets/context.js&quot;: {
+            &quot;created&quot;: &quot;20140418153435777&quot;,
+            &quot;creator&quot;: &quot;danielo&quot;,
+            &quot;modified&quot;: &quot;20140530231943517&quot;,
+            &quot;modifier&quot;: &quot;danielo&quot;,
+            &quot;module-type&quot;: &quot;widget&quot;,
+            &quot;title&quot;: &quot;$:/plugins/danielo515/ContextPlugin/widgets/context.js&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;text&quot;: &quot;/*\\\\\ntitle: $:/core/modules/widgets/danielo/context-widget.js\ntype: application/javascript\nmodule-type: widget\n\nEdit-text widget\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nvar Widget = require(\&quot;$:/core/modules/widgets/widget.js\&quot;).widget;\nvar contextWidget = function(parseTreeNode,options) {\n\tthis.initialise(parseTreeNode,options);\n};\n\n/*\nInherit from the base widget class\n*/\ncontextWidget.prototype = new Widget();\n\n/*\nRender this widget into the DOM\n*/\ncontextWidget.prototype.render = function(parent,nextSibling) {\n   // Save the parent dom node\n\tthis.parentDomNode = parent;\n\t// Compute our attributes\n\tthis.computeAttributes();\n\t// Execute our logic\n\tthis.execute();\n    \n  if(this.term &amp;&amp; this.term.length&gt;3){\n     \n      this.createRegexp();\n      var matches = this.executeRegexp();\n\t  if(matches.length &gt; 0){ \n        this.domNode = this.document.createElement(this.element);\n        this.domNode.className=\&quot;tw-context\&quot;;\n        this.composeResults( matches ); //this appends to domNode        \n      \t// Insert element\n      \tparent.insertBefore(this.domNode,nextSibling);\n      \tthis.renderChildren(this.domNode,null);\n\t  \tthis.domNodes.push(this.domNode);\n      }\n  }\n\t\n};\n\n/*\nCompute the internal state of the widget\n*/\ncontextWidget.prototype.execute = function() {\n\t// Get the parameters from the attributes\n    this.matchedClass = this.getAttribute(\&quot;matchClass\&quot;,\&quot;matched\&quot;);\n\tthis.tiddler = this.getAttribute( \&quot;tiddler\&quot;,this.getVariable(\&quot;currentTiddler\&quot;) );\n    this.term =  this.getAttribute(\&quot;term\&quot;,this.getAttribute(\&quot;searchTerm\&quot;));\n\tthis.contextLength = this.getAttribute(\&quot;length\&quot;,50);\n    this.before = this.getAttribute(\&quot;before\&quot;,this.contextLength);\n    this.after = this.getAttribute(\&quot;after\&quot;,this.contextLength);\n    this.maxMatches = this.getAttribute(\&quot;maxMatches\&quot;,10);\n    this.element = this.getAttribute(\&quot;element\&quot;,\&quot;pre\&quot;);\n\tthis.makeChildWidgets();\n};\n\n  /*Create the regular expression*/\ncontextWidget.prototype.createRegexp = function()\n{\n  var regString = \&quot;(\\\\w+[\\\\s\\\\S]{0,#before#})?(#term#)([\\\\s\\\\S]{0,#after#}\\\\w+)?\&quot;;\n\n  var regString = regString.replace(\&quot;#before#\&quot;,this.before).replace(\&quot;#term#\&quot;, $tw.utils.escapeRegExp(this.term) ) .replace(\&quot;#after#\&quot;,this.after);\n  this.regexp = new RegExp(regString,\&quot;ig\&quot;);\n  //console.log(regString);\n};\n/*\nexecute the regular expresion\n*/\ncontextWidget.prototype.executeRegexp = function()\n{\n  var text = this.wiki.getTiddlerText(this.tiddler), match,results = new Array();\n  while( (match = this.regexp.exec( text ) ) &amp;&amp; (results.length &lt; this.maxMatches) )\n      { results.push(match) }\n  //console.log(\&quot;matches\&quot;,results);\n  return results;\n};\n\n/*\ncompose the results\nmatches : array of match objects from regular expression execute\n*/\ncontextWidget.prototype.composeResults = function(matches){\n var result=[], self=this, node = this.domNode,\n dots = textNode(\&quot;...\\n\&quot;),\n span = matchedNode( this.term );\n\n  for(var i=0; i &lt; matches.length; i++){\n   processMatch( matches[i] );\n }\n  \n  function processMatch(match){\n    if( match.index !== 0) node.appendChild( dots.cloneNode(true) );\n    for( var i=1;i&lt;match.length;i++ ) {//match[0] full matched text (all groups together)\n      if( match[i] ) {\n        if ( match[i].toLowerCase() == self.term.toLowerCase() ) \n          node.appendChild( match[i] == self.term ? span.cloneNode(true) : matchedNode( match[i] ) )\n          else\n            node.appendChild( textNode( match[i]) )\n      }\n    }\n    if( match.index + match[0].length &lt; match.input.length) node.appendChild( dots.cloneNode(true) );\n  }\n  \n  function textNode(text){ return self.document.createTextNode(text) }\n  function matchedNode(text) { \n    var node = self.document.createElement(\&quot;span\&quot;); node.appendChild( textNode(text) );  node.className = self.matchedClass;\n    return node }\n  \n};\n/*\nSelectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering\n*/\ncontextWidget.prototype.refresh = function(changedTiddlers) {\n\tvar changedAttributes = this.computeAttributes();\n\tif(changedAttributes.tiddler || changedAttributes.term || changedAttributes.length || changedAttributes.matchedClass) {\n\t\tthis.refreshSelf();\n\t\treturn true;\n\t}\n    return this.refreshChildren(changedTiddlers);\n};\n\nexports.context = contextWidget;\n\n})();&quot;
+        },
+        &quot;$:/plugins/danielo515/ContextPlugin/visualizer&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/danielo515/ContextPlugin/visualizer&quot;,
+            &quot;tags&quot;: &quot;$:/tags/SearchResults&quot;,
+            &quot;caption&quot;: &quot;Context&quot;,
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[!is[system]search{$:/temp/search}sort[title]limit[250]]\&quot;&gt;\r\n  {{!!title||$:/core/ui/ListItemTemplate}}\r\n  &lt;$context term={{$:/temp/search}} /&gt;\r\n&lt;/$list&gt;\r\n&quot;
+        },
+        &quot;$:/plugins/danielo515/ContextPlugin/Stylesheet/results&quot;: {
+            &quot;created&quot;: &quot;20140529162823729&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet contextPlugin&quot;,
+            &quot;title&quot;: &quot;$:/plugins/danielo515/ContextPlugin/Stylesheet/results&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;text&quot;: &quot;.matched{background-color:yellow}\n.tw-context {/*border:1px solid;\n  /*word-break: break-all; word-wrap: break-word*/}&quot;
+        },
+        &quot;$:/plugins/danielo515/ContextPlugin/Caption&quot;: {
+            &quot;created&quot;: &quot;20140530174219263&quot;,
+            &quot;tags&quot;: &quot;contextPlugin&quot;,
+            &quot;title&quot;: &quot;$:/plugins/danielo515/ContextPlugin/Caption&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;Context search&quot;
+        },
+        &quot;Context Search&quot;: {
+            &quot;caption&quot;: &quot;{{$:/plugins/danielo515/ContextPlugin/Caption}}&quot;,
+            &quot;created&quot;: &quot;20140530173407542&quot;,
+            &quot;tags&quot;: &quot;$:/tags/AdvancedSearch&quot;,
+            &quot;title&quot;: &quot;Context Search&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/Search/\n&lt;$linkcatcher to=\&quot;$:/temp/advancedsearch\&quot;&gt;\n\n&lt;&lt;lingo Standard/Hint&gt;&gt;\n\n&lt;div class=\&quot;tw-search\&quot;&gt;&lt;$edit-text tiddler=\&quot;$:/temp/advancedsearch\&quot; type=\&quot;search\&quot; tag=\&quot;input\&quot;/&gt;&lt;$reveal state=\&quot;$:/temp/advancedsearch\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt; &lt;$link to=\&quot;\&quot; class=\&quot;btn-invisible\&quot;&gt;{{$:/core/images/close-button}}&lt;/$link&gt;&lt;/$reveal&gt;&lt;/div&gt;\n\n&lt;/$linkcatcher&gt;\n\n&lt;$reveal state=\&quot;$:/temp/advancedsearch\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt;\n&lt;div class=\&quot;tw-search-results\&quot;&gt;\n\n&lt;&lt;lingo Standard/Matches&gt;&gt;\n\n&lt;$list filter=\&quot;[!is[system]search{$:/temp/advancedsearch}sort[title]limit[250]]\&quot;&gt;\n{{!!title||$:/core/ui/ListItemTemplate}}\n&lt;$context term={{$:/temp/advancedsearch}}/&gt;\n&lt;/$list&gt;\n\n&lt;/div&gt;\n\n&lt;/$reveal&gt;\n\n&lt;$reveal state=\&quot;$:/temp/advancedsearch\&quot; type=\&quot;match\&quot; text=\&quot;\&quot;&gt;\n\n&lt;/$reveal&gt;\n&quot;
+        },
+        &quot;$:/plugins/danielo515/ContextPlugin/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/danielo515/ContextPlugin/readme&quot;,
+            &quot;text&quot;: &quot;!Usage\n\nAfter installing the plugin you will have a new tab in [[$:/AdvancedSearch]] called [[Context Search]]. If you want this functionality in other places you will have to edit the desired tiddler yourself adding the ''context widget''. For more details about using the widget see the section below.\n\n!!Using the widget\n\nThe very basic usage of the widget is the following:\n\n```\r\n&lt;$context term=\&quot;lorem\&quot;/&gt;\r\n```\r\nWhich will render as:\r\n&lt;$context term=\&quot;lorem\&quot;/&gt;\n\nThe widgets will search inside the current tiddler by default. Because that you see the same content twice here. This example is not very useful. Other more meaningful would be:\n\n```\r\n&lt;$list filter=\&quot;[search{$:/temp/advancedsearch}sort[title]limit[250]]\&quot;&gt;\r\n{{!!title||$:/core/ui/ListItemTemplate}}\r\n&lt;$context term={{$:/temp/advancedsearch}}/&gt;\r\n&lt;/$list&gt;\r\n```\n\nThat will search for tiddlers containing the text specified in [[$:/temp/advancedsearch]] and will display a link to the matching tiddlers plus a preview of the matching content. Something very similar is used in [[Context Search]]. Below you can find a complete list of parameters and their default values.\n\n|! parameter |! description | !default |\r\n| term | The term you want to search ||\r\n| searchTerm | An alias for the previous one ||\r\n| tiddler | The tiddler's name to look into | current tiddler |\r\n| length | Number of context characters to show | 50 |\r\n| before | Number of characters before the matched term to show | the value of the length parameter |\r\n| after | Number of characters after the matched term to show | the value of the length parameter |\r\n| maxMatches | maximun number of matched elements to show. Incrementing this can cause several performance issues | 10 |\r\n| element | Node element to create. This element will contain the results of the search. If you want to style it its class is `tw-context` | `&lt;pre&gt;` |\r\n| matchClass | The css class to assign to the matched terms in the results. This is used to highlight the results | matched |\n\n!Customizing the output\r\nThere are not many ways to customize the output of this widget. You can specify ''what type of node you want to create'' to wrap the results (div,span...). The default is `&lt;pre&gt;`. This container is created with the class `tw-context` so you can easily apply styles to it. Something similar happens to the ''highlighted'' words. You can specify the name of the class to assign to it and also you can apply styles to that class.\n\nA very basic example of customization could be:\n\n# Create a tiddler, for example [[$/plugins/danielo515/context/css]]\r\n# Paste the following text or any css rule you want: \&quot;\&quot;\&quot;\n\n&lt;pre&gt;\r\n.matched{background-color:yellow}\r\n.tw-context {\r\n  border:1px solid blue;\r\n  word-break: break-all; word-wrap: break-word;}\r\n&lt;/pre&gt;\r\n\&quot;\&quot;\&quot;\r\n# Tag it with `$:/tags/stylesheet`\r\n# Save the tiddler&quot;
+        }
+    }
+}</pre>
+</div>
+<div created="20140530174219263" modified="20200304200221257" tags="tb contextPlugin" title="$:/plugins/danielo515/ContextPlugin/Caption" type="text/vnd.tiddlywiki">
+<pre>Context search</pre>
+</div>
+<div created="20140418153435777" creator="danielo" modified="20200304200229185" modifier="danielo" module-type="widget" tags="tb" title="$:/plugins/danielo515/ContextPlugin/widgets/context.js" type="application/javascript">
+<pre>/*\\
+title: $:/core/modules/widgets/danielo/context-widget.js
+type: application/javascript
+module-type: widget
+
+Edit-text widget
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tc: false */
+&quot;use strict&quot;;
+
+var Widget = require(&quot;$:/core/modules/widgets/widget.js&quot;).widget;
+var contextWidget = function(parseTreeNode,options) {
+	this.initialise(parseTreeNode,options);
+};
+
+/*
+Inherit from the base widget class
+*/
+contextWidget.prototype = new Widget();
+
+/*
+Render this widget into the DOM
+*/
+contextWidget.prototype.render = function(parent,nextSibling) {
+   // Save the parent dom node
+	this.parentDomNode = parent;
+	// Compute our attributes
+	this.computeAttributes();
+	// Execute our logic
+	this.execute();
+    
+  if(this.term &amp;&amp; this.term.length&gt;3){
+     
+      this.createRegexp();
+      var matches = this.executeRegexp();
+	  if(matches.length &gt; 0){ 
+        this.domNode = this.document.createElement(this.element);
+        this.domNode.className=&quot;tw-context&quot;;
+        this.composeResults( matches ); //this appends to domNode        
+      	// Insert element
+      	parent.insertBefore(this.domNode,nextSibling);
+      	this.renderChildren(this.domNode,null);
+	  	this.domNodes.push(this.domNode);
+      }
+  }
+	
+};
+
+/*
+Compute the internal state of the widget
+*/
+contextWidget.prototype.execute = function() {
+	// Get the parameters from the attributes
+    this.matchedClass = this.getAttribute(&quot;matchClass&quot;,&quot;matched&quot;);
+	this.tiddler = this.getAttribute( &quot;tiddler&quot;,this.getVariable(&quot;currentTiddler&quot;) );
+    this.term =  this.getAttribute(&quot;term&quot;,this.getAttribute(&quot;searchTerm&quot;));
+	this.contextLength = this.getAttribute(&quot;length&quot;,50);
+    this.before = this.getAttribute(&quot;before&quot;,this.contextLength);
+    this.after = this.getAttribute(&quot;after&quot;,this.contextLength);
+    this.maxMatches = this.getAttribute(&quot;maxMatches&quot;,10);
+    this.element = this.getAttribute(&quot;element&quot;,&quot;pre&quot;);
+	this.makeChildWidgets();
+};
+
+  /*Create the regular expression*/
+contextWidget.prototype.createRegexp = function()
+{
+  var regString = &quot;(\\w+[\\s\\S]{0,#before#})?(#term#)([\\s\\S]{0,#after#}\\w+)?&quot;;
+
+  var regString = regString.replace(&quot;#before#&quot;,this.before).replace(&quot;#term#&quot;, $tw.utils.escapeRegExp(this.term) ) .replace(&quot;#after#&quot;,this.after);
+  this.regexp = new RegExp(regString,&quot;ig&quot;);
+  //console.log(regString);
+};
+/*
+execute the regular expresion
+*/
+contextWidget.prototype.executeRegexp = function()
+{
+  var text = this.wiki.getTiddlerText(this.tiddler), match,results = new Array();
+  while( (match = this.regexp.exec( text ) ) &amp;&amp; (results.length &lt; this.maxMatches) )
+      { results.push(match) }
+  //console.log(&quot;matches&quot;,results);
+  return results;
+};
+
+/*
+compose the results
+matches : array of match objects from regular expression execute
+*/
+contextWidget.prototype.composeResults = function(matches){
+ var result=[], self=this, node = this.domNode,
+ dots = textNode(&quot;...\n&quot;),
+ span = matchedNode( this.term );
+
+  for(var i=0; i &lt; matches.length; i++){
+   processMatch( matches[i] );
+ }
+  
+  function processMatch(match){
+    if( match.index !== 0) node.appendChild( dots.cloneNode(true) );
+    for( var i=1;i&lt;match.length;i++ ) {//match[0] full matched text (all groups together)
+      if( match[i] ) {
+        if ( match[i].toLowerCase() == self.term.toLowerCase() ) 
+          node.appendChild( match[i] == self.term ? span.cloneNode(true) : matchedNode( match[i] ) )
+          else
+            node.appendChild( textNode( match[i]) )
+      }
+    }
+    if( match.index + match[0].length &lt; match.input.length) node.appendChild( dots.cloneNode(true) );
+  }
+  
+  function textNode(text){ return self.document.createTextNode(text) }
+  function matchedNode(text) { 
+    var node = self.document.createElement(&quot;span&quot;); node.appendChild( textNode(text) );  node.className = self.matchedClass;
+    return node }
+  
+};
+/*
+Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
+*/
+contextWidget.prototype.refresh = function(changedTiddlers) {
+	var changedAttributes = this.computeAttributes();
+	if(changedAttributes.tiddler || changedAttributes.term || changedAttributes.length || changedAttributes.matchedClass) {
+		this.refreshSelf();
+		return true;
+	}
+    return this.refreshChildren(changedTiddlers);
+};
+
+exports.context = contextWidget;
+
+})();</pre>
 </div>
 <div author="Flibbles" core-version="&gt;=5.1.14" created="20200526001805463" demo="http://flibbles.github.io/tw5-relink/" dependents="" description="Flexibility when relinking renamed tiddlers" list="readme configuration" name="Relink" plugin-type="plugin" source="https://github.com/flibbles/tw5-relink" title="$:/plugins/flibbles/relink" type="application/json" version="1.10.0">
 <pre>{
@@ -10639,6 +11568,57 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div author="jd" core-version="1.1.19" created="20190206061130276" creator="HC Haase" description="Fullscreen Editor" list="readme" modified="20200304200245298" modifier="HC Haase" plugin-type="plugin" tags="tb" title="$:/plugins/jd/fullscreen-editor" type="application/json" version="1.0.0">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/jd/fullscreen-editor/EditButton&quot;: {
+            &quot;text&quot;: &quot;\\whitespace trim\n&lt;$navigator story=\&quot;$:/fullscreen-editor\&quot;&gt;\n&lt;$button message=\&quot;tm-edit-tiddler\&quot; tooltip=\&quot;Edit in full screen mode\&quot; class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n{{$:/core/images/full-screen-button}}\n&lt;/$list&gt;\n&lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n&lt;span class=\&quot;tc-btn-text\&quot;&gt;\n&lt;$text text=\&quot; \&quot;/&gt;\n&lt;$text text=\&quot;edit in full screen\&quot;/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;/$navigator&gt;&quot;,
+            &quot;title&quot;: &quot;$:/jd/fullscreen-editor/EditButton&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ViewToolbar&quot;,
+            &quot;modifier&quot;: &quot;jd&quot;,
+            &quot;modified&quot;: &quot;20190204134418116&quot;,
+            &quot;description&quot;: &quot;Edit in full screen mode&quot;,
+            &quot;creator&quot;: &quot;jd&quot;,
+            &quot;created&quot;: &quot;20190204123121582&quot;,
+            &quot;caption&quot;: &quot;{{$:/core/images/full-screen-button}} edit in full screen&quot;
+        },
+        &quot;$:/jd/fullscreen-editor/EditTemplate&quot;: {
+            &quot;text&quot;: &quot;&lt;$navigator story=\&quot;$:/fullscreen-editor\&quot;&gt;\n&lt;$keyboard key=((cancel-edit-tiddler)) message=\&quot;tm-cancel-tiddler\&quot;&gt;\n&lt;$keyboard key=((save-tiddler)) actions=\&quot;\&quot;\&quot;&lt;$action-sendmessage $message=\&quot;tm-save-tiddler\&quot;/&gt;&lt;$action-sendmessage $message=\&quot;tm-close-tiddler\&quot;/&gt;\&quot;\&quot;\&quot; class=\&quot;fullscreen-story-river\&quot; tag=\&quot;div\&quot;&gt;\n{{||$:/core/ui/EditTemplate/controls}}\n{{||$:/core/ui/EditTemplate/body}}\n&lt;/$keyboard&gt;\n&lt;/$keyboard&gt;\n&lt;/$navigator&gt;&quot;,
+            &quot;title&quot;: &quot;$:/jd/fullscreen-editor/EditTemplate&quot;,
+            &quot;modifier&quot;: &quot;jd&quot;,
+            &quot;modified&quot;: &quot;20190204140310285&quot;,
+            &quot;creator&quot;: &quot;jd&quot;,
+            &quot;created&quot;: &quot;20190204123536452&quot;
+        },
+        &quot;$:/jd/fullscreen-editor/PageTemplate&quot;: {
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[list[$:/fullscreen-editor]]\&quot; template=\&quot;$:/jd/fullscreen-editor/ViewTemplate\&quot; editTemplate=\&quot;$:/jd/fullscreen-editor/EditTemplate\&quot;/&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/jd/fullscreen-editor/PageTemplate&quot;,
+            &quot;tags&quot;: &quot;$:/tags/PageTemplate&quot;,
+            &quot;modifier&quot;: &quot;jd&quot;,
+            &quot;modified&quot;: &quot;20190204135522488&quot;,
+            &quot;creator&quot;: &quot;jd&quot;,
+            &quot;created&quot;: &quot;20190204123350692&quot;
+        },
+        &quot;$:/jd/fullscreen-editor/Stylesheet&quot;: {
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[[$:/fullscreen-editor]has:field[list]!field:list[]]\&quot;&gt;\n&lt;$list filter=\&quot;[[$:/fullscreen-editor]search:list[draft of]]\&quot;&gt;\n\n.tc-story-river {display: none; }\n\n.fullscreen-story-river {\n    background-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: block;\n    z-index: 2200;\n    overflow-y: auto;\n}\n\n.fullscreen-story-river .tc-tiddler-edit-title {\n    position: sticky;\n    top: 0;\n    background: &lt;&lt;colour page-background&gt;&gt;;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 0.5em 1em;\n}\n\n.fullscreen-story-river .tc-tiddler-edit-title &gt; div:nth-child(2) {\n    display: none;\n}\n\n.fullscreen-story-river .tc-tiddler-controls.tc-titlebar,\n.fullscreen-story-river .tc-tiddler-controls.tc-titlebar .tc-btn-invisible {\n    display: flex;\n    align-items: center;\n}\n\n.fullscreen-story-river .tc-editor-toolbar {\n    background: &lt;&lt;colour page-background&gt;&gt;;\n    padding: 0.25em 1em;\n    margin: 0;\n}\n\n.fullscreen-story-river  .tc-editor-toolbar button {\n    background: &lt;&lt;colour page-background&gt;&gt;;\n}\n\n.fullscreen-story-river textarea.tc-edit-texteditor {\n    border: none;\n    padding: 1em;\n    background-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n}\n\n&lt;$list filter=\&quot;[[$:/state/showeditpreview]text[yes]]\&quot;&gt;\n.fullscreen-story-river iframe.tc-edit-texteditor { width: 49%; }\n&lt;/$list&gt;\n\n&lt;$list filter=\&quot;[[$:/state/showeditpreview]!text[yes]]\&quot;&gt;\n.fullscreen-story-river iframe.tc-edit-texteditor { width: 100%; }\n&lt;/$list&gt;\n\n&lt;/$list&gt;\n&lt;/$list&gt;&quot;,
+            &quot;title&quot;: &quot;$:/jd/fullscreen-editor/Stylesheet&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;modifier&quot;: &quot;jd&quot;,
+            &quot;modified&quot;: &quot;20190204141756609&quot;,
+            &quot;creator&quot;: &quot;jd&quot;,
+            &quot;created&quot;: &quot;20190204124703056&quot;
+        },
+        &quot;$:/jd/fullscreen-editor/readme&quot;: {
+            &quot;created&quot;: &quot;20190206054820870&quot;,
+            &quot;creator&quot;: &quot;HC Haase&quot;,
+            &quot;text&quot;: &quot;With ''~FullscreenEditor'', you'll be able to edit the current tiddler distraction-free with this button, found at the usual tiddler controls: @@font-size:1.5em;{{||$:/jd/fullscreen-editor/EditButton}}@@\n\nAlso in this mode, &lt;kbd&gt;ctrl&lt;/kbd&gt;+&lt;kbd&gt;enter&lt;/kbd&gt; will save and close the tiddler, and &lt;kbd&gt;esc&lt;/kbd&gt; will cancel the edit (or whatever keyboard shortcut have been set for these two actions at $:/core/ui/ControlPanel/KeyboardShortcuts).&quot;,
+            &quot;title&quot;: &quot;$:/jd/fullscreen-editor/readme&quot;,
+            &quot;modifier&quot;: &quot;HC Haase&quot;,
+            &quot;modified&quot;: &quot;20190206054846709&quot;
+        }
+    }
+}</pre>
+</div>
 <div author="Roman VeselÃ½" bag="default" core-version="&gt;=5.0.8" dependents="" description="Horizontal view" list="readme settings" name="Krystal" plugin-type="plugin" revision="0" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.1.4">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -10770,6 +11750,34 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div author="Stephen Kimmel" created="20200304200251053" description="White List" modified="20200304200252195" plugin-type="plugin" tags="tb" title="$:/plugins/sk/WhiteList" type="application/json" version="0.0.3">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/sk/WhiteList&quot;: {
+            &quot;text&quot;: &quot;LeDoux,McCloud,McDonald,TiddlyWiki,TiddlyWiki5,CamelCase,DuBay,McGraw,McCullough,LeGrange,NaCl,MeOH,EtOH,PiB,TiddlyTools,ResetFind,WikiText,WinBuilder,WinPE,ProgramData,TiddlyFox,GuillermoMartin,AndrewFraser,RochesterMNwalkers,DEdwardsCalgary,WalkaboutMM,HarveyG,McCoy,GeForce,SideBar,AirBnB,PayPal,LeBron,JavaScript,ExpressJet,CutePDF,McClouds,McElroy,McGovern,TableHelper,ShadowTiddler&quot;,
+            &quot;caption&quot;: &quot;Words to never consider as CamelCase links&quot;,
+            &quot;created&quot;: &quot;20150210172146298&quot;,
+            &quot;creator&quot;: &quot;Stephen&quot;,
+            &quot;description&quot;: &quot;Words that should never be considered as CamelCase wikiwords. Separate the individual words with commas (,).&quot;,
+            &quot;modified&quot;: &quot;20160427151253707&quot;,
+            &quot;modifier&quot;: &quot;Stephen&quot;,
+            &quot;tags&quot;: &quot;ske&quot;,
+            &quot;title&quot;: &quot;$:/sk/WhiteList&quot;
+        },
+        &quot;$:/core/modules/parsers/wikiparser/rules/wikilink.js&quot;: {
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/core/modules/parsers/wikiparser/rules/wikilink.js\ntype: application/javascript\nmodule-type: wikirule\n\nWiki text inline rule for wiki links. For example:\n\n```\nAWikiLink\nAnotherLink\n~SuppressedLink\n```\n\nPrecede a camel case word with `~` to prevent it from being recognised as a link.\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nexports.name = \&quot;wikilink\&quot;;\nexports.types = {inline: true};\n\nexports.init = function(parser) {\n\tthis.parser = parser;\n\t// Regexp to match\n\tthis.matchRegExp = new RegExp($tw.config.textPrimitives.unWikiLink + \&quot;?\&quot; + $tw.config.textPrimitives.wikiLink,\&quot;mg\&quot;);\n};\n\n/*\nParse the most recent match\n*/\nexports.parse = function() {\n\t// Get the details of the match\n\tvar linkText = this.match[0];\n\t// Move past the macro call\n\tthis.parser.pos = this.matchRegExp.lastIndex;\n\t// If the link starts with the unwikilink character then just output it as plain text\n\tif(linkText.substr(0,1) === $tw.config.textPrimitives.unWikiLink) {\n\t\treturn [{type: \&quot;text\&quot;, text: linkText.substr(1)}];\n\t}\n// If the link is on the whitelist then just output is as plain text\nvar dummy = \&quot;$:/sk/WhiteList\&quot;\nvar whitelist=$tw.wiki.getTiddlerText(dummy).split(\&quot;,\&quot;);\nvar n=whitelist.indexOf(linkText);\n\nif(n&gt;-1) {\n\t\t\treturn [{type: \&quot;text\&quot;, text: linkText}];\n}\n\t// If the link has been preceded with a blocked letter then don't treat it as a link\n\tif(this.match.index &gt; 0) {\n\t\tvar preRegExp = new RegExp($tw.config.textPrimitives.blockPrefixLetters,\&quot;mg\&quot;);\n\t\tpreRegExp.lastIndex = this.match.index-1;\n\t\tvar preMatch = preRegExp.exec(this.parser.source);\n\t\tif(preMatch &amp;&amp; preMatch.index === this.match.index-1) {\n\t\t\treturn [{type: \&quot;text\&quot;, text: linkText}];\n\t\t}\n\t}\n\treturn [{\n\t\ttype: \&quot;link\&quot;,\n\t\tattributes: {\n\t\t\tto: {type: \&quot;string\&quot;, value: linkText}\n\t\t},\n\t\tchildren: [{\n\t\t\ttype: \&quot;text\&quot;,\n\t\t\ttext: linkText\n\t\t}]\n\t}];\n};\n\n})();\n&quot;,
+            &quot;created&quot;: &quot;20150209183326265&quot;,
+            &quot;creator&quot;: &quot;Stephen&quot;,
+            &quot;modified&quot;: &quot;20150210183324354&quot;,
+            &quot;modifier&quot;: &quot;Stephen&quot;,
+            &quot;module-type&quot;: &quot;wikirule&quot;,
+            &quot;tags&quot;: &quot;ske&quot;,
+            &quot;title&quot;: &quot;$:/core/modules/parsers/wikiparser/rules/wikilink.js&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;
+        }
+    }
+}</pre>
+</div>
 <div author="AlainD" core-version="&gt;=5.1.13" dependents="" description="Editor with some on-line completion capabilities" list="readme usage examples" plugin-type="plugin" source="https://github.com/snowgoon88/TW5-extendedit" title="$:/plugins/snowgoon88/edit-comptext" type="application/json" version="0.9.0">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -10828,6 +11836,24 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20200111192930718" modified="20200304200304800" tags="tb" title="$:/plugins/snowgoon88/edit-comptext/config" type="application/json">
+<pre>{
+  &quot;configuration&quot;: {
+      &quot;caseSensitive&quot; : false,
+      &quot;maxMatch&quot; : 8,
+      &quot;minPatLength&quot; : 2,
+      &quot;triggerKeyCombination&quot; : &quot;^ &quot;
+  },
+  &quot;template&quot;: [{
+      &quot;pattern&quot;: &quot;[[&quot;,
+      &quot;filter&quot;: &quot;[all[tiddlers]!is[system]]&quot;,
+      &quot;start&quot;: &quot;[[&quot;,
+      &quot;end&quot;: &quot;]]&quot;
+      }
+  ]
+}
+</pre>
 </div>
 <div author="Joao Bolila" dependents="" description="Highlight.js syntax highlighting" list="readme usage howto license" name="Highlight" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.22">
 <pre>{
@@ -11249,6 +12275,9 @@ Error message and password prompt
 <div created="20200618012844720" creator="debby" modified="20200618085705647" modifier="debby" title="$:/SiteTitle">
 <pre>í ¼í¼žTiddlyWiki</pre>
 </div>
+<div caption="Words to never consider as CamelCase links" created="20150210172146298" creator="Stephen" description="Words that should never be considered as CamelCase wikiwords. Separate the individual words with commas (,)." modified="20200304200314967" modifier="Stephen" tags="tb ske" title="$:/sk/WhiteList">
+<pre>LeDoux,McCloud,McDonald,TiddlyWiki,TiddlyWiki5,CamelCase,DuBay,McGraw,McCullough,LeGrange,NaCl,MeOH,EtOH,PiB,TiddlyTools,ResetFind,WikiText,WinBuilder,WinPE,ProgramData,TiddlyFox,GuillermoMartin,AndrewFraser,RochesterMNwalkers,DEdwardsCalgary,WalkaboutMM,HarveyG,McCoy,GeForce,SideBar,AirBnB,PayPal,LeBron,JavaScript,ExpressJet,CutePDF,McClouds,McElroy,McGovern,TableHelper,ShadowTiddler,WikiWords</pre>
+</div>
 <div created="20200527084422330" modified="20200527084422330" title="$:/state/plugin-info--2135486722-$:/plugins/tobibeer/preview---1090399154">
 <pre>config</pre>
 </div>
@@ -11271,12 +12300,24 @@ Error message and password prompt
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20200618032706502" creator="ã„Ž" modified="20200618032708843" modifier="debb" title="$:/status/UserName">
 <pre>debby</pre>
 </div>
-<div created="20200618085611859" creator="debby" list="[[From collector to creator]] Welcome" modified="20200618092031501" modifier="debby" title="$:/StoryList">
+<div created="20200618085611859" creator="debby" list="$:/Import [[From collector to creator]]" modified="20200618092812872" modifier="debby" title="$:/StoryList">
+<pre></pre>
+</div>
+<div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
+<pre></pre>
+</div>
+<div created="20200127183739219" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/.giffmex/buttons/newnote-datetime $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/more-page-actions" modified="20200304200346297" tags="tb" title="$:/tags/PageControls">
+<pre></pre>
+</div>
+<div created="20200128153730498" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body $:/.giffmex/ViewTemplate/viewfullnotes $:/.giffmex/ViewTemplate/refscontext $:/.giffmex/ViewTemplate/refslinks $:/.giffmex/ViewTemplate/refstranscludecollapse" modified="20200304200353810" tags="tb" title="$:/tags/ViewTemplate">
+<pre></pre>
+</div>
+<div created="20200127144249151" list="$:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/viewtoolbar/viewrefs $:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold" modified="20200304200401109" tags="tb" title="$:/tags/ViewToolbar">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12405,6 +13446,12 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
+<div created="20200127172539001" modified="20200304200413120" tags="tb" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fixed-fluid</pre>
+</div>
+<div created="20200127165334843" modified="20200304200423713" tags="tb" title="$:/view">
+<pre>zoomin</pre>
+</div>
 <div created="20200618091714228" creator="debby" modified="20200618092614247" modifier="debby" tags="Note-taking" title="From collector to creator" type="text/x-markdown">
 <pre>Many note-takers hoard content because it gives them an illusion of knowledge. The best way to truly understand anything is to use the generation effect: to produce your own content, in your own words, and to share it with the world to create a feedback loop.    Collect. Note-taking, raw snippets, Kindle highlights + personal commentary.    Connect. Link to previous notes. Do not keep orphan notes.    Create. Write 
 
@@ -12417,6 +13464,30 @@ from email.mime.text import MIMEText
 message['Cc'] = ''
 message['X-Priority'] = '2'
 ```</pre>
+</div>
+<div created="20200125152105770" modified="20200304194714120" tags=".sidebyside tb meta" title="TiddlyBlink">
+<pre>Welcome to TiddlyBlink! ~TiddlyBlink is an adaptation of TiddlyWiki with the goal of helping you see connections between your ideas, and move quickly from one idea to another. It was inspired by the bi-directional linking found in Roam (https://roamresearch.com/), but built with capabilities already available in ~TiddlyWiki (https://tiddlywiki.com). See my example file [ext[here|https://giffmex.org/gifts/tiddlyblinkexample.html]].&lt;br&gt;&lt;br&gt;
+
+''The basic idea:''
+
+Below each tiddler (note card) is a list of links to any other tiddlers that link to the current tiddler's title in their text field. There are four options for viewing those links, as seen in {{$:/core/images/preview-open}} menu above or in the TiddlyBlink menu in the sidebar. So as you create tiddlers for sources, notes and topics, you can link them all to each other and navigate between them in the 'blink' of an eye!
+
+&lt;hr&gt;
+
+''Basic instructions''
+
+&lt;span class=&quot;indent1&quot;&gt;&lt;$list filter=&quot;[!is[system]tag[meta]tag[starthere]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+
+''Advanced stuff''
+
+&lt;span class=&quot;indent1&quot;&gt;&lt;$list filter=&quot;[is[system]tag[meta]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;caption&quot;/&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;&lt;/span&gt;</pre>
+</div>
+<div created="20200128030902225" modified="20200508004536320" tags="tb meta" title="TiddlyBlink home">
+<pre>&lt;span style=&quot;color:red&quot;&gt;Hi there! I have now replaced ~TiddlyBlink with [[Stroll|https://giffmex.org/stroll/stroll.html]], and highly recommend using Stroll instead of ~TiddlyBlink or its unpopular cousin Idea Stew. Nevertheless I will leave this here since there will no doubt be holdouts who prefer ~TiddlyBlink.&lt;/span&gt;
+
+&lt;&lt;tabs &quot;TiddlyBlink .topicList .sourcesList .hideList&quot; &quot;TiddlyBlink&quot; &gt;&gt;</pre>
 </div>
 <div created="20200618090057764" creator="debby" modified="20200618092142127" modifier="debby" tags="" title="Welcome" type="text/x-markdown">
 <pre>Hi, welcome to my digital garden. í ½í±‹
