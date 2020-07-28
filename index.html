@@ -681,6 +681,8 @@ Error message and password prompt
 
 <li>TiddlyBlink home</li>
 
+<li>ToDo</li>
+
 <li>Welcome!</li>
 
 <li>李元佳</li>
@@ -12647,7 +12649,7 @@ html body.tc-body {
 <div created="20200618032706502" creator="ㄎ" modified="20200618032708843" modifier="debb" title="$:/status/UserName">
 <pre>debby</pre>
 </div>
-<div created="20200728033232714" creator="debby" list="[[Take train tickets]]" modified="20200728033232714" modifier="debby" title="$:/StoryList">
+<div created="20200728033232714" creator="debby" list="ToDo" modified="20200728033232714" modifier="debby" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200127163609843" list="$:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200304200339220" tags="tb" title="$:/tags/EditToolbar">
@@ -14117,6 +14119,17 @@ Below each tiddler (note card) is a list of links to any other tiddlers that lin
 </div>
 <div created="20200128030902225" creator="debby" modified="20200618093204659" modifier="debby" tags="tb meta" title="TiddlyBlink home">
 <pre>&lt;&lt;tabs &quot;TiddlyBlink .topicList .sourcesList .hideList&quot; &quot;TiddlyBlink&quot; &gt;&gt;</pre>
+</div>
+<div created="20200728035407300" creator="debby" modified="20200728035500949" modifier="debby" tags="" title="ToDo">
+<pre>&lt;$list filter=&quot;[tag[task]]&quot;&gt;
+&lt;$view field=&quot;title&quot;/&gt;
+&lt;/$list&gt;
+&lt;$list filter=&quot;[!has[draft.of]tag[task]]&quot;&gt;
+&lt;$view field=&quot;title&quot;/&gt;
+&lt;/$list&gt;
+&lt;$list filter=&quot;[!has[draft.of]tag[task]!tag[done]sort[created]]&quot;&gt;
+&lt;$view field=&quot;title&quot;/&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div created="20200618101519264" creator="debby" modified="20200618101734494" modifier="debby" tags="" title="Welcome!">
 <pre>Welcome to my ''digital garden''! 
